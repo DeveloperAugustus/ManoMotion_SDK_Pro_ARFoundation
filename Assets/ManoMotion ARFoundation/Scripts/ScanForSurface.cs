@@ -10,7 +10,6 @@ using TMPro;
 public class ScanForSurface : MonoBehaviour
 {
     public GameObject arPlanes;
-    public GameObject arBoxes;
     public GameObject[] ManoMotionObjects;
     public ARPlaneManager arPlaneManager;
     public int planeUpdates;
@@ -47,11 +46,6 @@ public class ScanForSurface : MonoBehaviour
         if (scannpercent > 100)
         {
             arPlanes.SetActive(false);
-
-            if (arBoxes != null)
-            {
-                arBoxes.SetActive(true);
-            }
 
             foreach (var item in ManoMotionObjects)
             {
